@@ -1,0 +1,248 @@
+/* Basic Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    color: #444;
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #ff5a00;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header Styling */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5a00;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 20px;
+    background: #e9e9ef;
+    border-radius: 30px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    background: transparent;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff5a00;
+    color: white;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e85000;
+}
+
+.cart a {
+    background-color: #ff5a00;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.nav-menu {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-menu a {
+    color: #666;
+    padding: 10px 20px;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #ff5a00;
+}
+
+/* Main Layout */
+main {
+    padding: 20px;
+}
+
+/* Category and Product Cards */
+.category-item, .product-item {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: center;
+}
+
+.category-item:hover, .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-grid, .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.product-item img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-item span {
+    display: block;
+    margin-top: 5px;
+    color: #ff5a00;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 8px;
+}
+
+/* Account Page */
+.account-section {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.account-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.account-options button {
+    padding: 12px 20px;
+    background-color: #ff5a00;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.account-options button:hover {
+    background-color: #e85000;
+}
+
+#login-form, #register-form {
+    background: #f4f4f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#login-form input, #register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #ffffff;
+}
+
+/* Banner Styling */
+.banner img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #e9e9ef;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ff5a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .product-grid, .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .account-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .account-options button {
+        width: 100%;
+    }
+}
